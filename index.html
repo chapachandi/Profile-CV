@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>| Chapa Chandi | CURRICULUM VITAE |</title>
     <link rel="icon" href="assets/icon/Cc.logo.white.svg.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alef&family=Roboto:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap" rel="stylesheet">-->
     <style>
         *{
             margin: 0;
@@ -25,9 +35,11 @@
         }
         header > ul > li {
             display: inline-block;
-            padding: 25px;
+            padding: 28px;
             cursor: pointer;
+            font-family: 'Alef', sans-serif;
             font-weight: bold
+
         }
         header > img {
             padding: 10px;
@@ -36,57 +48,286 @@
         }
         body>section{
             position: sticky;
-            /* visibility: visible; */
-            /* background-color: #e8eaf0; */
-            height: 720px;
+            /*height: 700px;*/
         }
         section>h1{
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 49%;
             transform: translate(-50%, -50%);
             color: white;
             font-size: 70px;
+            opacity: 1;
+            font-family: 'Alef', sans-serif;
+            letter-spacing: 2px;
+            /*!* transform: translate(0);*/
+            }
+        section>h2{
+                position: absolute;
+                top: 62%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 23px;
+                letter-spacing: 12px;
+                opacity: 1;
+                    /* transform: translate(0); */
+            transition-duration: .8s;
+            font-family: 'Alef', sans-serif;
 
         }
-        section>h2{
+        section>div>.aboutMe_image{
+            /*padding: 80px;*/
             position: absolute;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 9%;
+            left: 5%;
+            /*filter: blur(8px);*/
+            /*-webkit-filter: blur(9px);*/
+
+
+        }
+        section>div>h1{
+            position: absolute;
+            top: 19%;
+            left: 21%;
             color: white;
-            font-size: 23px;
+            font-size: 36px;
+            letter-spacing: 10px;
+            font-family: 'Righteous', cursive;
+            text-decoration-line: underline;
+            text-underline-offset: 10px;
+
+
+        }
+        .rectangle{
+            position: relative;
+            background-color: #2AB9E7;
+            height: 288px;
+            margin-top: 40px;
+        }
+        .rectangleGif{
+            height: 288px;
+            width: 426px;
+            position: relative;
+            left: 0;
+        }
+        .profilePic{
+            height: 208px;
+            width: 344px;
+            position: relative;
+            left: 808px;
+            top: 148px;
+            animation-duration: 15s;
+            -webkit-filter: drop-shadow(5px 5px 5px #866868);
+            filter: drop-shadow(5px 5px 5px #ffffff);
+        }
+        .background_AboutMe{
+            height: 700px;
+            background-color: #ffffff;
+            position: relative;
+            /*box-shadow: 5px 2px 7px 4px rgba(160, 191, 190, 0.84);*/
+        }
+        .facebook_icon{
+            left: 35px;
+            top: 154px;
+            position: absolute;
+        }
+        .instagram_icon{
+            left: 35px;
+            top:212px;
+            position: absolute;
+        }
+        .twitter_icon{
+            left: 35px;
+            top: 270px;
+            position: absolute;
+        }
+        .linkedin_icon{
+            left: 35px;
+            top: 327px;
+            position: absolute;
+        }
+        .github_icon{
+            left: 35px;
+            top: 386px;
+            position: absolute;
+        }
+        .pinterest_icon{
+            left: 35px;
+            top:440px;
+            position: absolute;
+        }
+        .skillsLeftSide{
+            position: relative;
+            height: 650px;
+            width: 317px;
+            top: 56px;
+            left: 106px;
+            background-color: #102777;
+        }
+        .SectionFour{
+            background-color: #e8eaf0;
+            height: 750px;
+        }
+        .skillsRightSide{
+            position: relative;
+            height: 650px;
+            width: 815px;
+            top: -593px;
+            left: 423px;
+            background-color: #ffffff;
+
+        }
+        .skillsHeader{
+            position: absolute;
+            top: 11%;
+            left: 21%;
+            /* transform: translate(-50%, -50%); */
+            color: #000000;
+            font-size: 49px;
+            letter-spacing: 57px;
+            font-family: 'Righteous', cursive;
+            /*font-family: 'Ubuntu', sans-serif;*/
+        }
+        .photographyImage{
+            height: 63px;
+            width: 50px;
+            position: absolute;
+            top: 109px;
+            left: 175px;
+            background: white;
+            box-shadow: 54px 100px 6px 63px #c5c5c5d6;
+
+
+        }
+        span.text1{
+            position: absolute;
+            top: 16%;
+            left: 132px;
+            color: #fffdfd;
+            font-size: 10px;
+            font-family: 'Righteous', cursive;
+            writing-mode: vertical-rl;
+            letter-spacing: 15px;
+        }
+        .designingImage{
+            height: 63px;
+            width: 50px;
+            position: absolute;
+            top: 285px;
+            left: 283px;
+            background: white;
+            box-shadow: 54px 100px 6px 63px #c5c5c5d6;
+
+        }
+        span.text2{
+            position: absolute;
+            top: 45%;
+            left: 235px;
+            color: #fffdfd;
+            font-size: 10px;
+            font-family: 'Righteous', cursive;
+            writing-mode: vertical-rl;
+            letter-spacing: 15px;
+
+        }
+        .programmingImage{
+            height: 63px;
+            width: 50px;
+            position: absolute;
+            top: 455px;
+            left: 358px;
+            background: white;
+            box-shadow: 54px 100px 6px 63px #c5c5c5d6;
+
+        }
+        span.text3{
+            position: absolute;
+            top: 68%;
+            left: 319px;
+            color: #fffdfd;
+            font-size: 10px;
+            font-family: 'Righteous', cursive;
+            writing-mode: vertical-rl;
             letter-spacing: 10px;
         }
-        section>div>img:nth-child(1){
-            padding: 80px;
+        .SectionFive{
+            background-color: #e8eaf0;
+            height: 750px;
+
+        }
+        .projectHeader{
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            /*margin-top: 10px;*/
+            top: 11%;
+            left: 21%;
+            /* transform: translate(-50%, -50%); */
+            color: #000000;
+            font-size: 55px;
+            letter-spacing: 72px;
+            font-family: 'Roboto', sans-serif;
+
         }
-        div>div{
+        .project1{
+            position: absolute;
+            height: 350px;
+            width: 360px;
+            background-color: white;
+            top: 30%;
+            left: 8%;
+        }
+        .project2{
+            position: absolute;
+            height: 350px;
+            width: 360px;
+            background-color: white;
+            top: 30%;
+            left: 38%;
+        }
+        .project3{
+            position: absolute;
+            height: 350px;
+            width: 360px;
+            background-color: white;
+            top: 30%;
+            left: 68%;
+        }
+        .pr1Image{
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            background: #d0baba;
+            -webkit-filter: drop-shadow(5px 5px 5px #866868);
+            filter: drop-shadow(5px 5px 5px #d0baba);
+        }
+        .pr2Image{
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            background: #d0baba;
+            -webkit-filter: drop-shadow(5px 5px 5px #866868);
+            filter: drop-shadow(5px 5px 5px #d0baba);
+        }
+        .pr3Image{
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            background: #d0baba;
+            -webkit-filter: drop-shadow(5px 5px 5px #866868);
+            filter: drop-shadow(5px 5px 5px #d0baba);
+        }
+        .footer{
             position: relative;
-            width: 422px;
-            height: 675px;
-            background-color: #0b1020;
-            left: 750px;
-            top: 30px;
-            bottom: 20px;
+            height: 250px;
+            background-color: #4e4242;
         }
-        /*section>div>img:nth-child(2){*/
-        /*    !*padding: 10px;*!*/
-        /*    width: 300px;*/
-        /*    height: 400px;*/
-        /*    position: relative;*/
-        /*    z-index: 3;*/
-        /*    left: 700px;*/
-        /*    top: 100px;*/
-        /*    bottom: 100px;*/
-        /*}*/
+        .footerHeader  {
+            position: absolute;
+            top: 17%;
+            left: 45%;
+            color: #f1f1f1;
+            font-size: 20px;
+            font-family: 'Alef', cursive;
+        }
     </style>
 </head>
 
@@ -95,7 +336,7 @@
     <img src="assets/icon/Cc.logo.white.svg.png" >
     <ul>
         <li>Home</li>
-        <li>AboutMe</li>
+        <li>About Me</li>
         <li>Skills</li>
         <li>Projects</li>
         <li>Education</li>
@@ -104,19 +345,82 @@
     </ul>
 </header>
 <section>
+    <div>
+        <img class="facebook_icon" src="assets/img/icons8-facebook-48%20(2).png"width="38"height="38">
+        <img class="instagram_icon" src="assets/img/icons8-instagram-48.png"width="38"height="38">
+        <img class="twitter_icon" src="assets/img/icons8-twitter-48.png"width="38"height="38">
+        <img class="linkedin_icon" src="assets/img/icons8-linkedin-50.png"width="38"height="38">
+        <img class="github_icon" src="assets/img/icons8-github-48.png"width="38"height="38">
+        <img class="pinterest_icon" src="assets/img/icons8-pinterest-48.png"width="38"height="38">
+    </div>
+
     <img src="assets/img/BWvUj.jpg" width="1350" height="700">
     <h1>I'm Chapa Chandi</h1>
     <h2>Web Designer & Web Developer</h2>
 </section>
 <section>
-    <div>
-        <img src="assets/img/313069.jpg" width="1200" height="562">
-        <div></div>
-<!--        <img src="assets/img/IMG_20180107_143347.jpg" width="300px" height="300px">-->
+    <div class="background_AboutMe">
+        <img class="aboutMe_image" src="assets/img/0c73ac2c27831c222c774b69bd033e33.jpg" width="1220" height="600">
+        <span class="profilePic"><img src="assets/img/cp.jpg" width="400" height="388"></span>
+        <h1>ABOUT ME</h1>
     </div>
 </section>
+<section>
+    <div class="rectangle">
+        <span>
+            <img class="rectangleGif" src="assets/img/firstGif.gif">
+        </span>
+    </div>
+</section>
+<section class="SectionFour">
+    <div class="skillsLeftSide"></div>
+    <div class="skillsRightSide">
+        <h2 class="skillsHeader">SKILLS</h2>
+    </div>
+    <span class="photographyImage">
+        <img src="assets/img/6a920d3169cd45d0afac579942e3f3e2%20(1).jpg" height="216"width="170">
+    </span>
+    <span class="text1">
+        PHOTOGRAPHY
+    </span>
+    <span class="designingImage">
+        <img src="assets/img/work_2.jpg" height="216"width="170">
+    </span>
+    <span class="text2">
+        DESIGNING
+    </span>
+    <span class="programmingImage">
+        <img src="assets/img/programmingImage.jpg" height="216"width="170">
+    </span>
+    <span class="text3">
+        PROGRAMMING
+    </span>
 
-
+</section>
+<section class="SectionFive">
+    <h4 class="projectHeader">PROJECTS</h4>
+    <div class="project">
+        <span class="project1">
+            <img class="pr1Image" src="assets/img/carparking.gif" width="300"height="220">
+        </span>
+        <span class="project2">
+            <img class="pr2Image" src="assets/img/posImage.gif" width="300"height="220">
+        </span>
+        <span class="project3">
+            <img class="pr3Image" src="assets/img/labImage.gif" width="300"height="220">
+        </span>
+    </div>
+</section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section>
+    <footer class="footer">
+        <h3 class="footerHeader">Follow Me</h3>
+    </footer>
+</section>
 
 
 </body>
