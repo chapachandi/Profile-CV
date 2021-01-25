@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title> Chapa Chandi</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
     <link rel="icon" href="assets/icon/Cc.logo.white.svg.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap"
@@ -15,43 +16,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Ubuntu&display=swap" rel="stylesheet">
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&family=Ubuntu&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Ubuntu&display=swap" rel="stylesheet">-->
 <!--    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap" rel="stylesheet">-->
     <style>
         *{
             margin: 0;
             padding: 0;
+            /*overflow-x: hidden;*/
         }
         header{
-            height: 90px;
-            background: white;
+            width: 100%;
+            height: 70px;
+            /*background: rgba(255 255 255 0.15);*/
             box-shadow: 1px 2px 7px 4px #bfa0a0d6;
-            position: relative;
+            background: white;
+            position: fixed;
+            display: flex;
+            z-index: 3;
+            transition: .5s;
+            box-sizing: border-box;
         }
+
         header>ul{
             position: absolute;
             right: 24px;
-            font-size: 20px;
+            font-size: 18px;
+            color: #ad0129;
             top: 0;
             list-style: none;
+            display: flex;
 
         }
         header > ul > li {
             display: inline-block;
-            padding: 28px;
+            padding: 23px;
             cursor: pointer;
             font-family: 'Alef', sans-serif;
             font-weight: bold
 
         }
+        header > ul > li:hover{
+            color: white;
+            background: #2AB9E7;
+        }
         header > img {
             padding: 10px;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
+            margin-left: 1.5%;
+            cursor: pointer;
+        }
+        /*.color_overlay{*/
+        /*    background: linear-gradient(to top right, blue,red);*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    opacity: .4;*/
+        /*    position: absolute;*/
+        /*}*/
+
+        .open_image{
+            /*animation: increas 50s linear 20ms infinite;*/
+
+        }
+        @keyframes increas {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+
         }
         body>section{
             position: sticky;
-           
+
         }
+        /*.SectionOne{*/
+        /*    background-color: #2AB9E7;*/
+        /*    background-blend-mode: darken;*/
+        /*    position: absolute;*/
+        /*    */
+        /*}*/
         section>h1{
             position: absolute;
             top: 50%;
@@ -62,6 +113,18 @@
             opacity: 1;
             font-family: 'Alef', sans-serif;
             letter-spacing: 2px;
+            cursor: default;
+            animation-name: f_Name;
+            animation-duration: 5s;
+        }
+        @keyframes f_Name {
+            0%{
+                font-size: 0;
+            }
+            100%{
+                font-size: 70px ;
+            }
+
         }
         section>h2{
             position: absolute;
@@ -73,8 +136,10 @@
             letter-spacing: 12px;
             opacity: 1;
             font-family: 'Alef', sans-serif;
+            cursor: default;
 
         }
+
         section>div>.aboutMe_image{
             position: absolute;
             top: 9%;
@@ -90,7 +155,16 @@
             font-family: 'Righteous', cursive;
             text-decoration-line: underline;
             text-underline-offset: 10px;
+            cursor: default;
+
         }
+
+        /*@keyframes A_animate {*/
+        /*    100%{*/
+        /*        transform: translateY(0);*/
+        /*    }*/
+
+        /*}*/
         .Age1{
             position: absolute;
             top: 30%;
@@ -100,6 +174,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Age2{
@@ -111,6 +186,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Address1{
@@ -122,6 +198,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Address2{
@@ -133,6 +210,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Address3{
@@ -144,6 +222,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Email1{
@@ -155,6 +234,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Email2{
@@ -166,6 +246,7 @@
             background-color: #b8b8b8;
             /*font-weight: bold;*/
             font-family: 'Arial', sans-serif;
+            cursor: pointer;
 
         }
         .Contact1{
@@ -177,6 +258,7 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: default;
 
         }
         .Contact2{
@@ -188,54 +270,50 @@
             font-weight: bold;
             /* letter-spacing: 10px; */
             font-family: 'Arial', sans-serif;
+            cursor: pointer;
 
         }
-        .Contact3{
-            position: absolute;
-            top: 77%;
-            left: 37%;
-            color: #0e9dcc;
-            z-index: 1;
-            font-size: 22px;
-            font-weight: bold;
-            font-family: 'Arial', sans-serif;
 
-        }
-        .tel{
-            position: absolute;
-            top: 77%;
-            left: 34%;
-            z-index: 1;
-        }
-        .telBorder{
-            position: absolute;
-            top: 76%;
-            left: 33%;
-            z-index: 1;
-            width: 164px;
-            height: 35px;
-            border: 2px solid #0e9dcc;
-        }
-        .DownloadBox{
-            position: absolute;
-            width: 164px;
-            height: 35px;
-            top: 76%;
-            left: 16%;
+        .dowload_cv{
             background-color: #2AB9E7;
-            z-index: 1;
-
-        }
-        .Download{
-            position: absolute;
-            top: 77%;
-            left: 18%;
+            border-color: #2ab9e7;
             color: #ffffff;
-            font-size: 18px;
-            /*font-weight: bold;*/
-            z-index: 2;
-            font-family: 'Arial', sans-serif;
-
+            padding: 11px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: 0.3s;
+            z-index: 3;
+            position: absolute;
+            bottom: 18%;
+            left: 17%;
+            cursor: pointer;
+        }
+        .dowload_cv:hover {
+            background-color: #56c710;
+            border-color: #56c710;
+            color: white;
+        }
+        .btn_cnt{
+            background-color: #00090c;
+            border-color: #2ab9e7;
+            color: #2AB9E7;
+            padding: 11px 38px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: 0.3s;
+            z-index: 3;
+            position: absolute;
+            bottom: 18%;
+            left: 32%;
+            cursor: pointer;
+            font-weight: bold;
+            /*background-image: url("assets/icon/icons8-phone-48.png");*/
+        }
+        .btn_cnt:hover{
+            background-color: white;
+            color: #2AB9E7;
         }
         .rectangle{
             position: relative;
@@ -259,7 +337,8 @@
             letter-spacing: 4px;
             font-family: 'Alef', sans-serif;
             text-align: center;
-            width: 700px
+            width: 700px;
+            cursor: default;
         }
         .Sec3TextName{
             position: absolute;
@@ -270,9 +349,11 @@
             font-size: 20px;
             letter-spacing: 4px;
             font-family: 'Alef', sans-serif;
+            cursor: default;
         }
         .SectionSix{
             background-color: #e8eaf0;
+            width: 360px;
         }
         .rectangle2{
             position: relative;
@@ -297,6 +378,7 @@
             letter-spacing: 4px;
             font-family: 'Alef', sans-serif;
             text-align: center;
+            cursor: default;
         }
         .Sec6TextName{
             position: absolute;
@@ -307,6 +389,7 @@
             font-size: 20px;
             letter-spacing: 4px;
             font-family: 'Alef', sans-serif;
+            cursor: default;
         }
         .profilePic{
             height: 208px;
@@ -327,31 +410,85 @@
             left: 35px;
             top: 154px;
             position: absolute;
+            z-index: 3;
+        }
+        .facebook_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(162, 160, 191, 0.84);
+            background-color: #3068d5;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
         }
         .instagram_icon{
             left: 35px;
             top:212px;
             position: absolute;
+            z-index: 3;
+        }
+        .instagram_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(172, 100, 100, 0.84);
+            background-color: #ef3ca7;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
         }
         .twitter_icon{
             left: 35px;
             top: 270px;
             position: absolute;
+            z-index: 3;
+        }
+        .twitter_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(28, 166, 180, 0.84);
+            background-color: #00b1e7;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
         }
         .linkedin_icon{
             left: 35px;
             top: 327px;
             position: absolute;
+            z-index: 3;
+        }
+        .linkedin_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(160, 161, 191, 0.84);
+            background-color: #ef3ca7;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
         }
         .github_icon{
             left: 35px;
             top: 386px;
             position: absolute;
+            z-index: 3;
+        }
+        .github_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+            background-color: #46367d;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
         }
         .pinterest_icon{
             left: 35px;
             top:440px;
             position: absolute;
+            z-index: 3;
+        }
+        .pinterest_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+            background-color: #ff071d;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
         }
         .skillsLeftSide{
             position: relative;
@@ -372,17 +509,33 @@
             top: -593px;
             left: 423px;
             background-color: #ffffff;
+
         }
+
+
         .skillsHeader{
             position: absolute;
             top: 11%;
-            left: 21%;
+            left:27%;
             /* transform: translate(-50%, -50%); */
             color: #6d5c5c;
             font-size: 49px;
-            letter-spacing: 57px;
+            letter-spacing: 55px;
             font-family: 'Righteous', cursive;
+            cursor: default;
             /*font-family: 'Ubuntu', sans-serif;*/
+            animation-name: header_S;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        @keyframes header_S {
+            0%{
+                font-size: 0;
+            }
+            100%{
+                font-size: 55px;
+            }
+
         }
         .skillsFooter{
             position: absolute;
@@ -393,7 +546,12 @@
             font-size: 20px;
             /* letter-spacing: 72px; */
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
 
+        }
+        .skillsFooter:hover {
+            transform: scale(1.15);
+            /*box-shadow: 1px 2px 7px 4px #bfa0a0d6;*/
         }
         .s_less-than1{
             position: absolute;
@@ -424,9 +582,11 @@
             left: 175px;
             background: white;
             box-shadow: 54px 100px 6px 63px #c5c5c5d6;
-
-
         }
+        .photographyImage:hover{
+            transform: scale(1.15);
+        }
+
         span.text1{
             position: absolute;
             top: 16%;
@@ -436,6 +596,19 @@
             font-family: 'Righteous', cursive;
             writing-mode: vertical-rl;
             letter-spacing: 15px;
+            cursor: default;
+            animation-name: ani1;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        @keyframes ani1 {
+            0%{
+                font-size: 0;
+            }
+            100%{
+                font-size: 10px;
+            }
+
         }
         .designingImage{
             height: 63px;
@@ -447,6 +620,9 @@
             box-shadow: 54px 100px 6px 63px #c5c5c5d6;
 
         }
+        .designingImage:hover{
+            transform: scale(1.15);
+        }
         span.text2{
             position: absolute;
             top: 45%;
@@ -456,6 +632,19 @@
             font-family: 'Righteous', cursive;
             writing-mode: vertical-rl;
             letter-spacing: 15px;
+            cursor: default;
+            animation-name: ani2;
+            animation-duration: 5s;
+            animation-delay: 1s;
+
+        }
+        @keyframes ani2{
+            0%{
+                font-size: 0;
+            }
+            100%{
+                font-size: 10px;
+            }
 
         }
         .programmingImage{
@@ -468,6 +657,9 @@
             box-shadow: 54px 100px 6px 63px #c5c5c5d6;
 
         }
+        .programmingImage:hover{
+            transform: scale(1.15);
+        }
         span.text3{
             position: absolute;
             top: 68%;
@@ -477,6 +669,19 @@
             font-family: 'Righteous', cursive;
             writing-mode: vertical-rl;
             letter-spacing: 10px;
+            cursor: default;
+            animation-name: ani3;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        @keyframes ani3 {
+            0%{
+                font-size: 0;
+            }
+            100%{
+                font-size: 10px;
+            }
+
         }
         .SectionFive{
             background-color: #e8eaf0;
@@ -492,6 +697,19 @@
             font-size: 55px;
             letter-spacing: 72px;
             font-family: 'Roboto', sans-serif;
+            cursor: default;
+            animation-name: ph_top_to_bot;
+            animation-duration: 8s;
+            animation-delay: 1s;
+
+        }
+        @keyframes ph_top_to_bot{
+            0%{
+                top: 3%;
+            }
+            100%{
+                top: 11%;
+            }
 
         }
         .projectFooter{
@@ -501,7 +719,11 @@
             color: #a79595;
             font-size: 20px;
             font-family: 'Roboto', sans-serif;
-
+            cursor: pointer;
+        }
+        .projectFooter:hover {
+            transform: scale(1.15);
+            /*box-shadow: 1px 2px 7px 4px #bfa0a0d6;*/
         }
         .p_less-than1{
             position: absolute;
@@ -531,6 +753,10 @@
             top: 30%;
             left: 8%;
 
+        }
+        .project1:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .carParking_Text{
             position: absolute;
@@ -570,6 +796,10 @@
             top: 30%;
             left: 38%;
         }
+        .project2:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+        }
         .project3{
             position: absolute;
             height: 350px;
@@ -577,6 +807,10 @@
             background-color: white;
             top: 30%;
             left: 68%;
+        }
+        .project3:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .image_border1{
             position: absolute;
@@ -589,6 +823,9 @@
             -webkit-filter: drop-shadow(5px 5px 5px #866868);
             filter: drop-shadow(5px 5px 5px #d0baba);
         }
+        .pr1Image{
+            animation: none;
+        }
         .image_border2{
             position: absolute;
             width: 300px;
@@ -600,6 +837,9 @@
             -webkit-filter: drop-shadow(5px 5px 5px #866868);
             filter: drop-shadow(5px 5px 5px #d0baba);
         }
+        .pr2Image{
+            animation: none;
+        }
         .image_border3{
             position: absolute;
             width: 300px;
@@ -610,6 +850,9 @@
             border: 2px solid #2AB9E7;
             -webkit-filter: drop-shadow(5px 5px 5px #866868);
             filter: drop-shadow(5px 5px 5px #d0baba);
+        }
+        .pr3Image{
+            animation: none;
         }
         .project_viwe1{
             position: absolute;
@@ -625,6 +868,13 @@
             letter-spacing: 2px;
             color: #403f3f;
             filter: drop-shadow(1px 1px 1px #d0baba);
+            cursor:pointer;
+        }
+        .project_viwe1:hover {
+            background-color: #6ef817;
+            border: 2px solid #fcf9f9;
+            color: white;
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .project_viwe2{
             position: absolute;
@@ -640,6 +890,13 @@
             letter-spacing: 2px;
             color: #403f3f;
             filter: drop-shadow(1px 1px 1px #d0baba);
+            cursor: pointer;
+        }
+        .project_viwe2:hover {
+            background-color: #6ef817;
+            border: 2px solid #fcf9f9;
+            color: white;
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .project_viwe3{
             position: absolute;
@@ -655,6 +912,13 @@
             letter-spacing: 2px;
             color: #403f3f;
             filter: drop-shadow(1px 1px 1px #d0baba);
+            cursor: pointer;
+        }
+        .project_viwe3:hover {
+            background-color: #6ef817;
+            border: 2px solid #fcf9f9;
+            color: white;
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .SectionSeven{
             position: sticky;
@@ -668,6 +932,7 @@
             font-size: 55px;
             letter-spacing: 72px;
             font-family: 'Roboto', sans-serif;
+            cursor: default;
         }
         .primaryBox{
             position: absolute;
@@ -678,7 +943,9 @@
             z-index: 1;
             left: 385px;
             bottom: 200px;
+            cursor: pointer;
         }
+
         .primaryText1{
             position: absolute;
             left: 31%;
@@ -687,6 +954,7 @@
             font-size: 20px;
             z-index: 2;
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
         }
         .primaryText2{
             position: absolute;
@@ -696,6 +964,7 @@
             font-size: 16px;
             z-index: 2;
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
         }
         .primaryLine{
             position: absolute;
@@ -727,6 +996,7 @@
             z-index: 1;
             left: 188px;
             bottom: 226px;
+            cursor: pointer;
 
         }
         .primarySynceCircle_Text{
@@ -739,6 +1009,7 @@
             left: 200px;
             bottom: 246px;
             font-size: 19px;
+            cursor: pointer;
         }
         .higherBox{
             position: absolute;
@@ -750,6 +1021,7 @@
             top:420px;
             left: 574px;
             /*bottom: 329px;*/
+            cursor: pointer;
         }
         .higherText1{
             position: absolute;
@@ -759,6 +1031,7 @@
             font-size: 20px;
             z-index: 2;
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
         }
         .higherText2{
             position: absolute;
@@ -768,6 +1041,7 @@
             font-size: 16px;
             z-index: 2;
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
         }
         .higherLine{
             position: absolute;
@@ -799,6 +1073,7 @@
             z-index: 1;
             top: 443px;
             left: 27.5%;
+            cursor: pointer;
         }
         .higherSynceCircle_Text{
             position: absolute;
@@ -810,6 +1085,7 @@
             top: 464px;
             left: 28.5%;
             font-size: 19px;
+            cursor: pointer;
         }
         .gdseBox{
             position: absolute;
@@ -822,6 +1098,7 @@
             right: 190px;
             /*left: 786px;*/
             /*bottom: 164px;*/
+            cursor: pointer;
         }
         .gdseText1{
             position: absolute;
@@ -831,6 +1108,7 @@
             font-size: 20px;
             z-index: 2;
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
         }
         .gdseText2{
             position: absolute;
@@ -840,6 +1118,7 @@
             font-size: 16px;
             z-index: 2;
             font-family: 'Roboto', sans-serif;
+            cursor: pointer;
         }
         .gdseLine{
             position: absolute;
@@ -871,6 +1150,8 @@
             z-index: 1;
             top: 267px;
             right: 49.4%;
+            cursor: pointer;
+
         }
         .gdseSynceCircle_Text{
             position: absolute;
@@ -882,6 +1163,7 @@
             top: 288px;
             right: 50.4%;
             font-size: 19px;
+            cursor: pointer;
         }
         .SectionEight{
             height: 500px;
@@ -892,7 +1174,6 @@
             position: absolute;
             top: 16%;
             left: 29%;
-            /* transform: translate(-50%, -50%); */
             color: #1A2693;
             font-size: 55px;
             font-weight: normal;
@@ -907,6 +1188,7 @@
             left: 21%;
             border: 2px solid #2AB9E7;
             background-color: white;
+            cursor: pointer;
         }
         .commentBox_Text1{
             top: 16%;
@@ -919,6 +1201,7 @@
             position: absolute;
             font-weight: normal;
             width: 700px;
+            cursor: pointer;
         }
         .commentBox_Text2{
             position: absolute;
@@ -931,21 +1214,20 @@
             text-align: center;
             font-weight: normal;
             width: 700px;
+            cursor: pointer;
         }
         .Sec8previous{
             position: absolute;
             width: 0;
-            /*height: -2px;*/
             border-right: 50px solid #bababb;
             border-top: 60px solid transparent;
             border-bottom: 60px solid transparent;
             top: 47%;
-            left: 14%;
+            left: 15%;
         }
         .Sec8next{
             position: absolute;
             width: 0;
-            /*height: -2px;*/
             border-left: 50px solid #bababb;
             border-top: 60px solid transparent;
             border-bottom: 60px solid transparent;
@@ -954,6 +1236,7 @@
         }
         .SectionNine{
             position: sticky;
+            height: 700px;
         }
         .interestHeader{
             position: absolute;
@@ -971,36 +1254,59 @@
             width: 186px;
             height: 174px;
             background-color: white;
-            top: 42%;
+            top: 36%;
             left: 19%;
+            cursor: pointer;
+            /*transition: 3s;*/
         }
+        .photographyBox:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+
+        }
+
         .gamesBox{
             position: absolute;
             width: 186px;
             height: 174px;
             background-color: white;
-            top: 42%;
+            top: 36%;
             left: 35%;
+            cursor: pointer;
+        }
+        .gamesBox:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .musicBox{
             position: absolute;
             width: 186px;
             height: 174px;
             background-color: white;
-            top: 42%;
+            top: 36%;
             left: 51%;
+            cursor: pointer;
+        }
+        .musicBox:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .paintingBox{
             position: absolute;
             width: 186px;
             height: 174px;
             background-color: white;
-            top: 42%;
+            top: 36%;
             left: 67%;
+            cursor: pointer;
+        }
+        .paintingBox:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
         }
         .photography_Text{
             position: absolute;
-            bottom: 12%;
+            bottom: 16%;
             left: 18%;
             z-index: 1;
             font-family: 'Roboto', sans-serif;
@@ -1008,10 +1314,11 @@
             text-align: center;
             letter-spacing: 1px;
             color: #0078d8;
+            cursor: pointer;
         }
         .games_Text{
             position: absolute;
-            bottom: 12%;
+            bottom: 16%;
             left: 30%;
             z-index: 1;
             font-family: 'Roboto', sans-serif;
@@ -1019,10 +1326,11 @@
             text-align: center;
             letter-spacing: 1px;
             color: #0078d8;
+            cursor: pointer;
         }
         .music_Text{
             position: absolute;
-            bottom: 12%;
+            bottom: 16%;
             left:36%;
             z-index: 1;
             font-family: 'Roboto', sans-serif;
@@ -1030,10 +1338,11 @@
             text-align: center;
             letter-spacing: 1px;
             color: #0078d8;
+            cursor: pointer;
         }
         .painting_Text{
             position: absolute;
-            bottom: 12%;
+            bottom: 16%;
             left: 30%;
             z-index: 1;
             font-family: 'Roboto', sans-serif;
@@ -1041,51 +1350,1524 @@
             text-align: center;
             letter-spacing: 1px;
             color: #0078d8;
+            cursor: pointer;
         }
         .cameraImage{
             position: absolute;
             z-index: 1;
             top: 13%;
-            left: 21%;
+            left: 25%;
+            cursor: pointer;
         }
         .gamesImage{
             position: absolute;
             z-index: 1;
             top: 13%;
-            left: 21%;
+            left: 25%;
+            cursor: pointer;
         }
         .musicImage{
             position: absolute;
             z-index: 1;
             top: 13%;
-            left: 21%;
+            left: 25%;
+            cursor: pointer;
         }
         .paintingImage{
             position: absolute;
             z-index: 1;
             top: 13%;
-            left: 21%;
+            left: 25%;
+            cursor: pointer;
         }
+
+        .Sec9previous{
+            position: absolute;
+            width: 0;
+            border-right: 50px solid #bababb;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            top: 41%;
+            left: 13%;
+            cursor: pointer;
+
+        }
+        .Sec9previous:hover{
+            left: 12%;
+        }
+        .Sec9next{
+            position: absolute;
+            width: 0;
+            border-left: 50px solid #bababb;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            top: 41%;
+            right: 13%;
+            cursor: pointer;
+        }
+        .Sec9next:hover{
+            right: 12%;
+        }
+        .In_text{
+            position: absolute;
+            left: 21%;
+            top: 77%;
+            /* width: 500px; */
+            color: #f1f1f1;
+            font-size: 30px;
+            letter-spacing: 3px;
+            font-family: 'Aleo', serif;
+            /* font-family: 'Archivo'; */
+            font-weight: normal;
+        }
+        .SectionTen{
+            height: 890px;
+            background-color: #ded9d9;
+            position: relative;
+        }
+        .SecContact{
+            width: 1200px;
+            height: 670px;
+            background-color: #ffffff;
+            position: relative;
+            z-index: 1;
+            top: 13%;
+            left: 6%;
+        }
+        .Sec10Header{
+            position: absolute;
+            top: 10%;
+            left: 13.4%;
+            color: #000000;
+            font-size: 37px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .NameText{
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            color: #8b8b8b;
+            font-size: 20px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .NameBox{
+            width: 500px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            z-index: 2;
+            border: 2px solid #2AB9E7;
+            top: 25%;
+            left: 5%;
+        }
+        .EmailText{
+            position: absolute;
+            top: 37%;
+            left: 5%;
+            color: #8b8b8b;
+            font-size: 20px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .EmailBox{
+            width: 500px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            z-index: 2;
+            border: 2px solid #2AB9E7;
+            top: 42%;
+            left: 5%;
+        }
+        .MessageText{
+            position: absolute;
+            top: 54%;
+            left: 5%;
+            color: #8b8b8b;
+            font-size: 20px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .MessageBox{
+            width: 500px;
+            height: 180px;
+            background-color: #ffffff;
+            position: absolute;
+            z-index: 2;
+            border: 2px solid #2AB9E7;
+            top: 59%;
+            left: 5%;
+        }
+        .CntctInFo{
+            position: absolute;
+            top: 25%;
+            left: 58.4%;
+            color: #000000;
+            font-size: 30px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .PlaceText{
+            position: absolute;
+            top: 35%;
+            left: 61.4%;
+            color: #838080;
+            font-size: 18px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .TelText{
+            position: absolute;
+            top: 43%;
+            left: 61.4%;
+            color: #838080;
+            font-size:18px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .mailText{
+            position: absolute;
+            top: 51%;
+            left: 61.4%;
+            color: #838080;
+            font-size: 18px;
+            font-family: 'Arial';
+            font-weight: normal;
+            cursor: default;
+        }
+        .PlaceIcon{
+            position: absolute;
+            top: 35%;
+            left: 58.4%;
+
+        }
+        .TelIcon{
+            position: absolute;
+            top: 43%;
+            left: 58.4%;
+
+        }
+        .EnvelopeIcon{
+            position: absolute;
+            top: 51%;
+            left: 58.4%;
+
+        }
+        .Submit{
+            position: absolute;
+            width: 153px;
+            height: 41px;
+            bottom: 6%;
+            left: 5%;
+            background-color: #00b1e7;
+            color: white;
+            font-family: 'Alef', sans-serif;
+            z-index: 3;
+            font-weight: bold;
+            font-size: 18px;
+            border-color: #0e9dcc;
+
+        }
+        .Submit:hover{
+            background-color: #56c710;
+            border-color: #56c710;
+        }
+
         .footer{
             position: relative;
             height: 250px;
-            background-color: #4e4242;
+            background-color: #3F3A3A;
         }
         .footerHeader  {
             position: absolute;
             top: 17%;
             left: 45%;
             color: #f1f1f1;
-            font-size: 20px;
+            font-size: 30px;
             font-family: 'Alef', cursive;
+            font-weight: normal;
+            cursor: default;
+
         }
 
-    </style>
+        .footer_facebook_icon{
+            left: 39%;
+            top: 40%;
+            position: absolute;
+            cursor: pointer;
+        }
+        .footer_facebook_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(162, 160, 191, 0.84);
+            background-color: #3068d5;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
+        }
+        .footer_instagram_icon{
+            left: 43%;
+            top: 40%;
+            position: absolute;
+            cursor: pointer;
+        }
+        .footer_instagram_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(180, 25, 178, 0.84);
+            background-color: #da0eef;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
+        }
+        .footer_twitter_icon{
+            left: 47%;
+            top: 40%;
+            position: absolute;
+            cursor: pointer;
+        }
+        .footer_twitter_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(76, 67, 206, 0.84);
+            background-color: #3068d5;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
+        }
+        .footer_linkedin_icon{
+            left: 51%;
+            top: 40%;
+            position: absolute;
+            cursor: pointer;
+        }
+        .footer_linkedin_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(41, 30, 199, 0.84);
+            background-color: #3068d5;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
+        }
+        .footer_github_icon{
+            left: 55%;
+            top: 40%;
+            position: absolute;
+            cursor: pointer;
+        }
+        .footer_github_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(162, 160, 191, 0.84);
+            background-color: #9921e8;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
+        }
+        .footer_pinterest_icon{
+            left: 59%;
+            top: 40%;
+            position: absolute;
+            cursor: pointer;
+        }
+        .footer_pinterest_icon:hover {
+            transform: scale(1.15);
+            box-shadow: 1px 2px 7px 4px rgba(191, 160, 169, 0.84);
+            background-color: #f80c0c;
+            border-radius: 100%;
+            background-blend-mode: darken;
+
+        }
+        .CopyrightText{
+            position: absolute;
+            bottom: 29%;
+            left: 42.23%;
+            color: #f1f1f1;
+            font-size: 12px;
+            font-family: 'Alef', cursive;
+            font-weight: normal;
+            cursor: default;
+        }
+        /*.ProgressBar{*/
+        /*    position: absolute;*/
+        /*    top: 33%;*/
+        /*    left: 20%;*/
+        /*    width: 60%;*/
+        /*    height: 20px;*/
+        /*    background-color: #eee;*/
+        /*    border-radius: 2px;*/
+        /*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;*/
+        /*    background-color: blue;*/
+        /*    border-radius: 2px;*/
+        /*}*/
+        /*p {*/
+        /*    font-size: 20px;*/
+        /*}*/
+
+        .container1 {
+            background-color: rgb(208 208 208);
+            width: 70%;
+            border-radius: 10px;
+            height: 18px;
+            position: absolute;
+            top: 35%;
+            left: 20%;
+
+        }
+        .container2 {
+            background-color: rgb(208 208 208);
+            width: 70%;
+            border-radius: 15px;
+            height: 20px;
+            position: absolute;
+            top: 45%;
+            left: 20%;
+
+        }
+        .container3 {
+            background-color: rgb(208 208 208);
+            width: 70%;
+            border-radius: 15px;
+            height: 20px;
+            position: absolute;
+            top: 55%;
+            left: 20%;
+
+        }
+        .container4 {
+            background-color: rgb(208 208 208);
+            width: 70%;
+            border-radius: 15px;
+            height: 20px;
+            position: absolute;
+            top: 65%;
+            left: 20%;
+
+        }
+        .container5 {
+            background-color: rgb(208 208 208);
+            width: 70%;
+            border-radius: 15px;
+            height: 20px;
+            position: absolute;
+            top: 75%;
+            left: 20%;
+
+        }
+
+        .skill {
+            /*background-color: rgb(116, 194, 92);*/
+            color: white;
+            padding: 1%;
+            text-align: right;
+            font-size: 10px;
+            border-radius: 15px;
+        }
+
+        .designing {
+            background-color: rgb(178 92 194);
+            width: 80%;
+            height: 8px;
+            top: 30%;
+            animation-name: designing_skill;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        .java {
+            background-color: rgb(178 92 194);
+            width: 65%;
+            height: 8px;
+            top: 40%;
+            animation-name: java_skill;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+        .html {
+            background-color: rgb(178 92 194);
+            width: 85%;
+            height: 8px;
+            top: 50%;
+            animation-name: html_skill;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+        .css{
+            background-color: rgb(178 92 194);
+            width: 75%;
+            height: 8px;
+            top: 60%;
+            animation-name:css_skill;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+        .js {
+            background-color: rgb(178 92 194);
+            width: 60%;
+            height: 8px;
+            top: 70%;
+            animation-name: js_skill;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+        @keyframes designing_skill {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 80%;
+            }
+
+        }
+        @keyframes java_skill {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 65%;
+            }
+
+        }
+        @keyframes html_skill {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 85%;
+            }
+
+        }
+        @keyframes css_skill {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 75%;
+            }
+
+        }
+        @keyframes js_skill {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 60%;
+            }
+
+        }
+
+        .Design{
+            top: 30%;
+            left: 20%;
+            font-size: 18px;
+            position: absolute;
+            cursor: default;
+            font-family: 'Alef', sans-serif;
+        }
+        .Java{
+            top: 40%;
+            left: 20%;
+            font-size: 18px;
+            position: absolute;
+            cursor: default;
+            font-family: 'Alef', sans-serif;
+        }
+        .HTML{
+            top: 50%;
+            left: 20%;
+            font-size: 18px;
+            position: absolute;
+            cursor: default;
+            font-family: 'Alef', sans-serif;
+        }
+        .CSS{
+            top: 60%;
+            left: 20%;
+            font-size: 18px;
+            position: absolute;
+            cursor: default;
+            font-family: 'Alef', sans-serif;
+        }
+        .JS{
+            top: 70%;
+            left: 20%;
+            font-size: 18px;
+            position: absolute;
+            cursor: default;
+            font-family: 'Alef', sans-serif;
+        }
+        .Typing_Animation1{
+            /*animation: type1 3s steps(13);*/
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .Typing_Animation2{
+            animation: type2 5s steps(24);
+            overflow: hidden;
+            white-space: nowrap;
+            /*animation-delay: 2s;*/
+
+        }
+        @keyframes type1 {
+            0% {
+                width: 0ch;
+
+            }
+            100%{
+                width: 13ch;
+
+            }
+
+        }
+        @keyframes type2 {
+            0%{
+                width: 0ch;
+            }
+            100%{
+                width: 50ch;
+            }
+        }
+        label {
+            margin: 0 0 1px 196px;
+            font-size: 26px;
+            line-height: 70px;
+            text-align: right;
+            right: 5%;
+            display: none;
+        }
+        #toggle{
+            /*position: absolute;*/
+            /*background-color: #ea4242;*/
+            /*width: 100%;*/
+            /*padding: 10px 20px;*/
+            /*text-align: right;*/
+            /*box-sizing: border-box;*/
+            /*color: white;*/
+            /*font-size: 30px;*/
+            text-align: right;
+            cursor: pointer;
+            display: none;
+        }
+        .newPf{
+            animation: none;
+        }
+        .Sectiontwo{
+            animation: none;
+        }
+        @media only screen and (max-width: 500px) {
+            .toggle{
+                display: block;
+                cursor: pointer;
+            }
+            label{
+                display: block;
+            }
+            header > ul{
+                width: 100%;
+                text-align: center;
+                display: none;
+            }
+            header > ul > li{
+                display: block;
+                text-align: center;
+                margin: 0;
+            }
+            #toggle:checked + li{
+                display: block;
+            }
+
+            
+        }
+        @media all and (max-width: 280px){
+
+            .SectionOne{
+                width: 280px;
+            }
+            .Sectiontwo{
+                width: 280px;
+            }
+            .SectionThree{
+                width: 280px;
+            }
+            .SectionFour{
+                width: 280px;
+            }
+            .SectionFive{
+                width: 280px;
+            }
+            .SectionSix{
+                width: 280px;
+            }
+            .SectionSeven{
+                width: 280px;
+                height: 489px;
+            }
+            .SectionEight{
+                width: 280px;
+                display: none;
+            }
+            .SectionNine{
+                width: 280px;
+                display: none;
+            }
+            .SectionTen {
+                width: 280px;
+                height: 492px;
+            }
+            .SectionEleven{
+                width: 280px;
+            }
+
+            header {
+                width: 280px;
+                height: 46px;
+                box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+                background: white;
+                position: fixed;
+                display: flex;
+                z-index: 3;
+                transition: .5s;
+                box-sizing: border-box;
+            }
+            header > img {
+                padding: 3px;
+                width: 40px;
+                height: 40px;
+                margin-left: 0.5%;
+                cursor: pointer;
+            }
+            .open_image {
+                width: 280px;
+                height: 212px;
+                position: sticky;
+            }
+            section>h1 {
+                top: 50%;
+                left: 52%;
+                transform: translate(-50%, -50%);
+                font-size: 21px;
+                opacity: 1;
+                font-family: 'Alef', sans-serif;
+                letter-spacing: 2px;
+                animation-name: f_Name;
+                animation-duration: 5s;
+            }
+            @keyframes f_Name {
+                0%{
+                    font-size:0;
+                }
+                100%{
+                    font-size: 21px;
+                }
+
+            }
+            section>h2 {
+                position: absolute;
+                top: 62%;
+                left: 52%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 8px;
+                letter-spacing: 3px;
+                opacity: 1;
+                font-family: 'Alef', sans-serif;
+            }
+            .facebook_icon {
+                left: 11px;
+                top: 71px;
+                position: absolute;
+                z-index: 3;
+                width: 12px;
+                height: 12px;
+            }
+            .instagram_icon {
+                left: 11px;
+                top: 89px;
+                /*position: absolute;*/
+                /*z-index: 3;*/
+                width: 12px;
+                height: 12px;
+            }
+            .twitter_icon {
+                left: 11px;
+                top: 108px;
+                position: absolute;
+                z-index: 3;
+                width: 12px;
+                height: 12px;
+            }
+            .linkedin_icon {
+                left: 11px;
+                top: 127px;
+                position: absolute;
+                z-index: 3;
+                width: 12px;
+                height: 12px;
+            }
+            .github_icon {
+                left: 11px;
+                top: 145px;
+                position: absolute;
+                z-index: 3;
+                width: 12px;
+                height: 12px;
+            }
+            .pinterest_icon {
+                left: 11px;
+                top: 161px;
+                width: 12px;
+                height: 12px;
+            }
+            .profilePic {
+                left: 38%;
+                top: 9px;
+            }
+            .newPf {
+                width: 60px;
+                height: 98px;
+
+            }
+            section>div>.aboutMe_image {
+                display: none;
+            }
+            section>div>h1 {
+                position: absolute;
+                top: 16%;
+                left: 22%;
+                color: #502424;
+                font-size: 20px;
+                letter-spacing: 8px;
+                font-family: 'Righteous', cursive;
+                text-decoration-line: underline;
+                text-underline-offset: 10px;
+            }
+            .Age1 {
+                top: 23%;
+                left: 17%;
+                color: #5a5555;
+                font-size: 13px;
+
+            }
+            .Age2 {
+                top: 23%;
+                left: 43%;
+                color: #5a5555;
+                font-size: 13px;
+            }
+            .Address1 {
+                top: 26%;
+                left: 17%;
+                color: #5a5555;
+                font-size: 13px;
+            }
+            .Address2 {
+                top: 26%;
+                left: 42%;
+                color: #5a5555;
+                font-size: 13px;
+                width: 38%;
+
+            }
+            .Address3 {
+                top: 31%;
+                left: 43%;
+                color: #5a5555;
+                font-size: 13px;
+            }
+            .Email1 {
+                top: 38%;
+                left: 17%;
+                color: #5a5555;
+                font-size: 13px;
+
+            }
+            .Email2 {
+                position: absolute;
+                top: 38%;
+                left: 43%;
+                color: #5a5555;
+                font-size: 12px;
+                /* background-color: #b8b8b8; */
+                /* font-weight: bold; */
+                font-family: 'Arial', sans-serif;
+                /* width: 13px; */
+            }
+            .Contact1 {
+                top: 34%;
+                left: 17%;
+                color: #5a5555;
+                font-size: 13px;
+
+            }
+            .Contact2 {
+                top: 34%;
+                left: 43%;
+                color: #5a5555;
+                font-size: 13px;
+
+            }
+            .dowload_cv {
+                padding: 5px 12px;
+                font-size: 10px;
+                bottom: 51%;
+                left: 16%;
+            }
+            .btn_cnt {
+                background-color: #2e4158;
+                border-color: #5670ad;
+                color: #ffffff;
+                padding: 5px 20px;
+                font-size: 10px;
+                bottom: 51%;
+                left: 54%;
+
+            }
+            .Sectiontwo {
+                height: 362px;
+                /*width: 360px;*/
+            }
+            .rectangle {
+                display: none;
+            }
+            .SectionFour {
+                height: 362px;
+                /*width: 360px;*/
+            }
+            .skillsLeftSide {
+                display: none;
+            }
+            .photographyImage{
+                display: none;
+            }
+            span.text1{
+                display: none;
+            }
+            .designingImage{
+                display: none;
+            }
+            span.text2{
+                display: none;
+            }
+            .programmingImage{
+                display: none;
+            }
+            span.text3{
+                display: none;
+            }
+            .skillsRightSide {
+                height: 302px;
+                width: 267px;
+                top: 9%;
+                left: 4%;
+                background-color: #e8eaf0;
+            }
+            .skillsHeader {
+                top: 9%;
+                left: 26%;
+                font-size: 18px;
+                letter-spacing: 16px;
+                color: #920b43;
+                cursor: default;
+                animation-name: header_S;
+                animation-duration: 5s;
+                animation-delay: 1s;
+            }
+            @keyframes header_S {
+                0%{
+                    font-size:0;
+                }
+                100%{
+                    font-size: 18px;
+                }
+
+            }
+            .skillsFooter {
+                bottom: 10%;
+                left: 44%;
+                font-size: 12px;
+
+            }
+            .s_less-than1 {
+                display: none;
+            }
+            .s_less-than2 {
+                display: none;
+            }
+            .s_more-than1 {
+                display: none;
+            }
+            .s_more-than2 {
+                display: none;
+            }
+            .Design {
+                top: 25%;
+                left: 12%;
+                font-size: 13px;
+            }
+            .container1 {
+                width: 76%;
+                height: 12px;
+                top: 31%;
+                left: 12%;
+            }
+            .Java {
+                top: 36%;
+                left: 12%;
+                font-size: 13px;
+            }
+            .container2 {
+                width: 76%;
+                border-radius: 10px;
+                height: 12px;
+                top: 42%;
+                left: 12%;
+            }
+            .HTML {
+                top: 47%;
+                left: 13%;
+                font-size: 13px;
+            }
+            .container3 {
+                width: 76%;
+                border-radius: 15px;
+                height: 12px;
+                top: 53%;
+                left: 13%;
+            }
+            .CSS {
+                top: 58%;
+                left: 13%;
+                font-size: 13px;
+            }
+            .container4 {
+                width: 76%;
+                border-radius: 10px;
+                height: 12px;
+                top: 64%;
+                left: 13%;
+            }
+            .JS {
+                top: 69%;
+                left: 13%;
+                font-size: 13px;
+            }
+            .container5 {
+                width: 76%;
+                border-radius: 10px;
+                height: 12px;
+                top: 74%;
+                left: 13%;
+            }
+            .projectHeader {
+                position: absolute;
+                top: 1%;
+                left: 20%;
+                /* transform: translate(-50%, -50%); */
+                color: #805c5c;
+                font-size: 23px;
+                letter-spacing: 9px;
+                font-family: 'Roboto', sans-serif;
+                cursor: default;
+                /* animation-name: ph_top_to_bot; */
+                /* animation-duration: 8s; */
+                /* animation-delay: 1s; */
+            }
+            .project1 {
+                position: absolute;
+                height: 200px;
+                width: 210px;
+                background-color: white;
+                top: 7%;
+                left: 15%;
+            }
+            .carParking_Text {
+                position: absolute;
+                top: 8%;
+                left: 13%;
+                z-index: 1;
+                font-family: 'Alef', sans-serif;
+                font-size: 11px;
+                text-align: center;
+                letter-spacing: 3px;
+            }
+            .image_border1 {
+                width: 150px;
+                height: 135px;
+                top: 41px;
+                left: 27px;
+            }
+            .pr1Image {
+                width: 150px;
+                height: 93px;
+            }
+            .project2 {
+                position: absolute;
+                height: 200px;
+                width: 210px;
+                background-color: white;
+                top: 35%;
+                left: 15%;
+            }
+            .pos_Text {
+                position: absolute;
+                top: 8%;
+                left: 25%;
+                z-index: 1;
+                font-family: 'Alef', sans-serif;
+                font-size: 11px;
+                text-align: center;
+                letter-spacing: 3px;
+            }
+            .image_border2 {
+                width: 150px;
+                height: 135px;
+                top: 41px;
+                left: 27px;
+            }
+            .pr2Image {
+                width: 150px;
+                height: 93px;
+            }
+            .project_viwe1 {
+                width: 84px;
+                height: 18px;
+                bottom: 7%;
+                left: 23%;
+                border: 2px solid #2AB9E7;
+                font-family: 'Alef', sans-serif;
+                font-size: 14px;
+
+            }
+            .project_viwe2 {
+                width: 84px;
+                height: 18px;
+                bottom: 7%;
+                left: 23%;
+                font-size: 14px;
+            }
+            .project_viwe3 {
+                width: 84px;
+                height: 18px;
+                bottom: 7%;
+                left: 23%;
+                font-size: 14px;
+            }
+            .project3 {
+                position: absolute;
+                height: 200px;
+                width: 210px;
+                background-color: white;
+                top: 63%;
+                left: 15%;
+            }
+            .lab_Text {
+                position: absolute;
+                top: 7%;
+                left: 5%;
+                z-index: 1;
+                font-family: 'Alef', sans-serif;
+                font-size: 11px;
+                text-align: center;
+                letter-spacing: 3px;
+            }
+            .image_border3 {
+                width: 150px;
+                height: 135px;
+                top: 46px;
+                left: 27px;
+            }
+            .pr3Image {
+                width: 150px;
+                height: 93px;
+            }
+            .rectangle2 {
+                display: none;
+            }
+            .EducationHeader {
+                top: 7%;
+                left: 16%;
+                font-size: 21px;
+                letter-spacing: 10px;
+            }
+            .gdseBox {
+                width: 164px;
+                height: 60px;
+                z-index: 1;
+                top: 131px;
+                right: 14px;
+
+            }
+            .gdseText1 {
+                top: 141px;
+                left: 44%;
+                font-size: 15px;
+            }
+            .gdseText2 {
+                top: 162px;
+                left: 44%;
+                font-size: 11px;
+                width: 110px;
+            }
+            .gdseLine {
+                height: 84px;
+                border: 1px solid #E310CE;
+                z-index: 1;
+                top: 122px;
+                right: 70.5%;
+            }
+            .gdseLineCircle {
+                height: 10px;
+                width: 10px;
+                border: 1px solid #E310CE;
+                top: 161px;
+                right: 69%;
+            }
+            .gdseSynceCircle {
+                height: 30px;
+                width: 49px;
+                top: 150px;
+                right: 74.4%;
+            }
+            .gdseSynceCircle_Text {
+                top: 164px;
+                right: 76.4%;
+                font-size: 9px;
+            }
+            .primaryBox {
+                width: 164px;
+                height: 60px;
+                z-index: 1;
+                top: 338px;
+                left: 34%;
+            }
+            .primaryText1 {
+                top: 349px;
+                left: 44%;
+                font-size: 15px;
+            }
+            .primaryText2 {
+                top: 373px;
+                left: 44%;
+                font-size: 11px;
+                width: 110px;
+            }
+            .primaryLine {
+                height: 84px;
+                border: 1px solid #0e9dcc;
+                z-index: 1;
+                top: 331px;
+                /* right: 70.5%; */
+                left: 29%;
+            }
+            .primaryLineCircle {
+                height: 10px;
+                width: 10px;
+                border: 1px solid #0e9dcc;
+                top: 365px;
+                /* right: 69%; */
+                left: 27%;
+            }
+            .primarySynceCircle {
+                height: 30px;
+                width: 49px;
+                top: 352px;
+                left: 6%;
+            }
+            .primarySynceCircle_Text {
+                top: 366px;
+                /* right: 76.4%; */
+                left: 8%;
+                font-size: 9px;
+            }
+            .higherBox {
+                width: 164px;
+                height: 60px;
+                top: 236px;
+                /* right: 86px; */
+                left: 34%;
+            }
+            .higherText1 {
+                top: 247px;
+                left: 44%;
+                font-size: 15px;
+            }
+            .higherText2 {
+                top: 268px;
+                left: 44%;
+                font-size: 11px;
+                width: 110px;
+            }
+            .higherLine {
+                height: 84px;
+                border: 1px solid #E4B81C;
+                z-index: 1;
+                top: 227px;
+                /* right: 83.5%; */
+                left: 29%;
+            }
+            .higherLineCircle {
+                height: 10px;
+                width: 10px;
+                border: 1px solid #E4B81C;
+                top: 264px;
+                /* right: 69%; */
+                left: 27%;
+            }
+            .higherSynceCircle {
+                height: 30px;
+                width: 49px;
+                top: 252px;
+                left: 5%;
+            }
+            .higherSynceCircle_Text {
+                top: 265px;
+                /* right: 76.4%; */
+                font-size: 9px;
+                left: 7%;
+            }
+            .Ed_Image{
+                width: 280px;
+                height: 489px;
+            }
+            .SecContact {
+                width: 280px;
+                height: 490px;
+                background-color: #ffffff;
+                position: relative;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+            .Sec10Header {
+                position: absolute;
+                top: 6%;
+                left: 26.4%;
+                color: #000000;
+                font-size: 16px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .NameText {
+                position: absolute;
+                top: 10%;
+                left: 8%;
+                color: #8b8b8b;
+                font-size: 15px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .NameBox {
+                width: 220px;
+                height: 28px;
+                background-color: #ffffff;
+                position: absolute;
+                z-index: 2;
+                border: 2px solid #2AB9E7;
+                top: 14%;
+                left: 8%;
+            }
+            .EmailText {
+                position: absolute;
+                top: 22%;
+                left: 8%;
+                color: #8b8b8b;
+                font-size: 15px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .EmailBox {
+                width: 220px;
+                height: 28px;
+                background-color: #ffffff;
+                position: absolute;
+                z-index: 2;
+                border: 2px solid #2AB9E7;
+                top: 27%;
+                left: 8%;
+            }
+            .MessageText {
+                position: absolute;
+                top: 36%;
+                left: 8%;
+                color: #8b8b8b;
+                font-size: 15px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .MessageBox {
+                width: 220px;
+                height: 100px;
+                background-color: #ffffff;
+                position: absolute;
+                z-index: 2;
+                border: 2px solid #2AB9E7;
+                top: 41%;
+                left: 8%;
+            }
+            .Submit {
+                position: absolute;
+                width: 98px;
+                height: 31px;
+                bottom: 34%;
+                left: 8%;
+                background-color: #00b1e7;
+                color: white;
+                font-family: 'Alef', sans-serif;
+                z-index: 3;
+                font-weight: bold;
+                font-size: 15px;
+                border-color: #0e9dcc;
+            }
+            .CntctInFo {
+                position: absolute;
+                top: 71%;
+                left: 8%;
+                color: #000000;
+                font-size: 16px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .PlaceText {
+                position: absolute;
+                top: 76%;
+                left: 19.4%;
+                color: #838080;
+                font-size: 11px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+                width: 173px;
+            }
+            .PlaceIcon {
+                position: absolute;
+                top: 76%;
+                left: 8%;
+            }
+            .TelText {
+                position: absolute;
+                top: 82%;
+                left: 20%;
+                color: #838080;
+                font-size: 11px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .TelIcon {
+                position: absolute;
+                top: 81%;
+                left: 8%;
+            }
+            .mailText {
+                position: absolute;
+                top: 87%;
+                left: 19%;
+                color: #838080;
+                font-size: 11px;
+                font-family: 'Arial';
+                font-weight: normal;
+                cursor: default;
+            }
+            .EnvelopeIcon {
+                position: absolute;
+                top: 86%;
+                left: 8%;
+            }
+            .footer {
+                position: relative;
+                height: 101px;
+                background-color: #3F3A3A;
+            }
+            .footerHeader {
+                position: absolute;
+                top: 16%;
+                left: 38%;
+                color: #f1f1f1;
+                font-size: 15px;
+                font-family: 'Alef', cursive;
+                font-weight: normal;
+                cursor: default;
+            }
+            .CopyrightText {
+                position: absolute;
+                bottom: 20%;
+                left: 31.23%;
+                color: #f1f1f1;
+                font-size: 7px;
+                font-family: 'Alef', cursive;
+                font-weight: normal;
+                cursor: default;
+            }
+            .footer_facebook_icon {
+                left: 33%;
+                top: 42%;
+                position: absolute;
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+            }
+            .footer_instagram_icon {
+                left: 39%;
+                top: 42%;
+                position: absolute;
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+            }
+            .footer_twitter_icon {
+                left: 46%;
+                top: 42%;
+                position: absolute;
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+            }
+            .footer_linkedin_icon {
+                left: 53%;
+                top: 42%;
+                position: absolute;
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+            }
+            .footer_github_icon {
+                 left: 59%;
+                 top: 42%;
+                 position: absolute;
+                 cursor: pointer;
+                 width: 16px;
+                 height: 16px;
+             }
+            .footer_pinterest_icon {
+                left: 65%;
+                top: 42%;
+                position: absolute;
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+            }
+
+
+        }
+
+</style>
 </head>
 
 <body>
 <header>
     <img src="assets/icon/Cc.logo.white.svg.png" >
+    <label class="toggle">&#9776</label>
+    <input type="ChechBox" id="toggle"/>
     <ul>
         <li>Home</li>
         <li>About Me</li>
@@ -1095,26 +2877,40 @@
         <li>References</li>
         <li>Contact</li>
     </ul>
+    <div class="header-lark"></div>
 </header>
-<section>
+<section class="SectionOne">
     <div>
-        <img class="facebook_icon" src="assets/img/icons8-facebook-48%20(2).png"width="38"height="38">
-        <img class="instagram_icon" src="assets/img/icons8-instagram-48.png"width="38"height="38">
-        <img class="twitter_icon" src="assets/img/icons8-twitter-48.png"width="38"height="38">
-        <img class="linkedin_icon" src="assets/img/icons8-linkedin-50.png"width="38"height="38">
-        <img class="github_icon" src="assets/img/icons8-github-48.png"width="38"height="38">
-        <img class="pinterest_icon" src="assets/img/icons8-pinterest-48.png"width="38"height="38">
+        <a href="">
+            <img class="facebook_icon" src="assets/icon/icons8-facebook-48%20(3).png"width="38"height="38">
+        </a>
+        <a href="">
+            <img class="instagram_icon" src="assets/icon/icons8-instagram-48%20(1).png"width="38"height="38">
+        </a>
+        <a href="">
+            <img class="twitter_icon" src="assets/icon/icons8-twitter-48%20(3).png"width="38"height="38">
+        </a>
+        <a href="">
+            <img class="linkedin_icon" src="assets/icon/icons8-linkedin-2-48%20(1).png"width="38"height="38">
+        </a>
+        <a href="">
+            <img class="github_icon" src="assets/icon/icons8-github-48%20(2).png"width="40"height="40">
+        </a>
+        <a href="">
+            <img class="pinterest_icon" src="assets/icon/icons8-pinterest-48%20(1).png"width="36"height="36">
+        </a>
     </div>
 
-    <img src="assets/img/BWvUj.jpg" width="1350" height="700">
-    <h1>I'm Chapa Chandi</h1>
-    <h2>Web Designer & Web Developer</h2>
+    <img class="open_image" src="assets/img/BWvUj.jpg" width="1350" height="700">
+
+    <h1 class="Typing_Animation1">I'm Chapa Chandi</h1>
+    <h2 class="Typing_Animation2">Web Designer & Web Developer</h2>
 </section>
-<section>
+<section class="Sectiontwo">
     <div class="background_AboutMe">
         <img class="aboutMe_image" src="assets/img/0c73ac2c27831c222c774b69bd033e33.jpg" width="1000" height="559">
-        <span class="profilePic"><img src="assets/img/sdme.jpg" height="559"></span>
-        <h1>ABOUT ME</h1>
+        <span class="profilePic"><img class="newPf" src="assets/img/sdme.jpg" height="559"></span>
+        <h1 class="wrapper">ABOUT ME</h1>
         <span class="Age1">Age</span>
         <span class="Age2">24</span>
         <span class="Address1">Address</span>
@@ -1124,17 +2920,19 @@
         <span class="Email2"><a href="mailto:chapachandi23@gmail.com">chapachandi23@gmail.com</a></span>
         <span class="Contact1">Contact</span>
         <span class="Contact2">077-3521340</span>
-        <span class="Contact3">Contact</span>
-        <span class="telBorder"></span>
-        <span class="tel">
-            <img src="assets/icon/icons8-phone-48.png" width="26"height="26">
-        </span>
-        <span class="DownloadBox"></span>
-        <span class="Download">Download CV</span>
+<!--        <span class="Contact3">Contact</span>-->
+<!--        <span class="telBorder"></span>-->
+<!--        <span class="tel">-->
+<!--            <img src="assets/icon/icons8-phone-48.png" width="26"height="26">-->
+<!--        </span>-->
+<!--        <span class="DownloadBox"></span>-->
+<!--        <span class="Download">Download CV</span>-->
+        <button class="dowload_cv">Download CV</button>
+        <button class="btn_cnt">Contact</button>
 
     </div>
 </section>
-<section>
+<section class="SectionThree">
     <div class="rectangle">
         <span >
             <img class="rectangleGif" src="assets/img/firstGif.gif">
@@ -1149,11 +2947,35 @@
         <h2 class="skillsHeader">SKILLS</h2>
         <h3 class="skillsFooter">more</h3>
         <div class="skillBar">
-            <h4>Design</h4>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <span>85%</span>
-                </div>
+            <div class="Design">
+                <p>Designing</p>
+            </div>
+            <div class="container1">
+                <div class="skill designing">80%</div>
+            </div>
+            <div class="Java">
+                <p>Java</p>
+            </div>
+            <div class="container2">
+                <div class="skill java">65%</div>
+            </div>
+            <div class="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="container3">
+                <div class="skill html">85%</div>
+            </div>
+            <div class="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="container4">
+                <div class="skill css">75%</div>
+            </div>
+            <div class="JS">
+                <p>JS</p>
+            </div>
+            <div class="container5">
+                <div class="skill js">60%</div>
             </div>
         </div>
         <span class="s_less-than1"><img src="assets/icon/icons8-less-than-24.png" width="20" height="20"></span>
@@ -1225,7 +3047,7 @@
     </div>
 </section>
 <section class="SectionSeven">
-    <img src="assets/img/d.png" width="1350" height="900">
+    <img class="Ed_Image" src="assets/img/d.png" width="1350" height="900">
     <div>
         <span class="EducationHeader">EDUCATION</span>
         <span class="primaryBox"></span>
@@ -1267,27 +3089,73 @@
 <section class="SectionNine">
     <img src="assets/img/web-design-background-image.jpg" height="700" width="1350">
     <h1 class="interestHeader">INTEREST</h1>
+    <h5 class="In_text">“Be the change that you wish to see in the world.”</h5>
     <div class="photographyBox">
         <span class="photography_Text">Photography</span>
-        <img class="cameraImage" src="assets/img/icons8-camera-enhance-100.png" width="100" height="100">
+        <img class="cameraImage" src="assets/img/icons8-camera-enhance-100.png" width="90" height="90">
     </div>
     <div class="gamesBox">
         <span class="games_Text">Games</span>
-        <img class="gamesImage" src="assets/img/icons8-game-controller-100.png" width="100" height="100">
+        <img class="gamesImage" src="assets/img/icons8-game-controller-100.png" width="90" height="90">
     </div>
     <div class="musicBox">
         <span class="music_Text">Music</span>
-        <img class="musicImage" src="assets/img/icons8-music-library-100.png" width="100" height="100">
+        <img class="musicImage" src="assets/img/icons8-music-library-100.png" width="90" height="90">
     </div>
     <div class="paintingBox">
         <span class="painting_Text">Painting</span>
-        <img class="paintingImage" src="assets/img/icons8-drawing-100.png" width="100" height="100">
+        <img class="paintingImage" src="assets/img/icons8-drawing-100.png" width="90" height="90">
     </div>
+    <div class="Sec9previous"></div>
+    <div class="Sec9next"></div>
+
 </section>
-<section></section>
-<section>
+<section class="SectionTen">
+    <section class="SecContact">
+        <h1 class="Sec10Header">Contact Me</h1>
+        <div>
+            <h2 class="NameText">Name</h2>
+            <input class="NameBox"></input>
+        </div>
+        <div>
+            <h2 class="EmailText">Email</h2>
+            <input class="EmailBox"></input>
+        </div>
+        <div>
+            <h2 class="MessageText">Message</h2>
+            <input class="MessageBox"></input>
+        </div>
+
+        <h3 class="CntctInFo">Contact Info</h3>
+
+        <div>
+            <h4 class="PlaceText">No.38, Dudley Senanayaka MW, Akuressa</h4>
+            <img class="PlaceIcon" src="assets/icon/icons8-place-marker-48.png" width="20" height="20">
+        </div>
+        <div>
+            <h4 class="TelText">077-3521340</h4>
+            <img class="TelIcon" src="assets/icon/icons8-phone-48%20(2).png" width="20" height="20">
+        </div>
+        <div>
+            <h4 class="mailText">chapachandi23@gmail.com</h4>
+            <img class="EnvelopeIcon" src="assets/icon/icons8-envelope-48.png" width="20" height="20">
+        </div>
+        <input class="Submit" type="submit" value="Submit">
+    </section>
+
+</section>
+<section class="SectionEleven">
     <footer class="footer">
-        <h3 class="footerHeader">Follow Me</h3>
+        <h1 class="footerHeader">Follow Me</h1>
+        <div>
+            <img class="footer_facebook_icon" src="assets/icon/icons8-facebook-48%20(3).png"width="38"height="38">
+            <img class="footer_instagram_icon" src="assets/icon/icons8-instagram-48%20(1).png"width="38"height="38">
+            <img class="footer_twitter_icon" src="assets/icon/icons8-twitter-48%20(3).png"width="38"height="38">
+            <img class="footer_linkedin_icon" src="assets/icon/icons8-linkedin-2-48%20(1).png"width="38"height="38">
+            <img class="footer_github_icon" src="assets/icon/icons8-github-48%20(2).png"width="40"height="40">
+            <img class="footer_pinterest_icon" src="assets/icon/icons8-pinterest-48%20(1).png"width="38"height="38">
+        </div>
+        <h2 class="CopyrightText">Copyright ©2020 All rights reserved </h2>
     </footer>
 </section>
 
