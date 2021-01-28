@@ -1,4 +1,5 @@
 
+
 *{
     margin: 0;
     padding: 0;
@@ -2368,9 +2369,19 @@ label {
         letter-spacing: 9px;
         font-family: 'Roboto', sans-serif;
         cursor: default;
-        /* animation-name: ph_top_to_bot; */
-        /* animation-duration: 8s; */
-        /* animation-delay: 1s; */
+        animation-name: ph_top_to_bot;
+        animation-duration: 8s;
+        animation-delay: 1s;
+
+    }
+    @keyframes ph_top_to_bot{
+        0%{
+            top: 0;
+        }
+        100%{
+            top: 1%;
+        }
+
     }
     .project1 {
         position: absolute;
@@ -2862,8 +2873,6 @@ label {
         width: 15px;
         height: 15px;
     }
-
-
 }
 @media all and (min-width: 320px) and (max-width: 360px){
     .toggle{
@@ -3277,9 +3286,19 @@ label {
         letter-spacing: 9px;
         font-family: 'Roboto', sans-serif;
         cursor: default;
-        /* animation-name: ph_top_to_bot; */
-        /* animation-duration: 8s; */
-        /* animation-delay: 1s; */
+        animation-name: ph_top_to_bot;
+        animation-duration: 8s;
+        animation-delay: 1s;
+
+    }
+    @keyframes ph_top_to_bot{
+        0%{
+            top: 0;
+        }
+        100%{
+            top: 1%;
+        }
+
     }
     .project1 {
         position: absolute;
@@ -3776,130 +3795,6 @@ label {
 
 
 }
-
-@media all and (min-width: 768px) and (max-width: 1280px){
-    .SectionOne{
-        width: 1280px;
-    }
-    .Sectiontwo{
-        width: 1280px;
-    }
-    .SectionThree{
-        width: 1280px;
-    }
-    .SectionFour{
-        width: 1280px;
-    }
-    .SectionFive{
-        width: 1280px;
-    }
-    .SectionSix{
-        width: 1280px;
-    }
-    .SectionSeven{
-        width: 1280px;
-        /*height: 489px;*/
-    }
-    .SectionEight{
-        width:1280px;
-        /*display: none;*/
-    }
-    .SectionNine{
-        width: 1280px;
-        /*display: none;*/
-    }
-    .SectionTen {
-        width: 1280px;
-        /*height: 492px;*/
-    }
-    .SectionEleven{
-        width: 1280px;
-    }
-    header {
-        width: 99%;
-        /*width: 1280px;*/
-        height: 70px;
-        box-shadow: 1px 2px 7px 4px #bfa0a0d6;
-        background: white;
-        position: fixed;
-        display: flex;
-        z-index: 3;
-        transition: .5s;
-        box-sizing: border-box;
-    }
-    .open_image {
-        /* animation: increas 50s linear 20ms infinite; */
-        width: 1280px;
-    }
-    .rectangle2 {
-        position: relative;
-        background-color: #1A71A3;
-        height: 288px;
-        width: 1247px;
-    }
-    .Ed_Image{
-        width: 1280px;
-    }
-    .Int_Image {
-        animation: none;
-        width: 1280px;
-    }
-    .projectHeader {
-        left: 18%;
-    }
-    .project1 {
-        left: 6%;
-    }
-    .project2 {
-        left: 36%;
-    }
-    .project3 {
-        left: 66%;
-    }
-    .primaryText1 {
-        left: 33%;
-    }
-    .higherBox {
-        left: 546px;
-    }
-    .gdseBox {
-        right: 156px;
-    }
-    .Sec8next {
-        right: 10%;
-    }
-    .In_text {
-        left: 19%;
-    }
-    .SecContact {
-        width: 1134px;
-        position: absolute;
-    }
-    .skillsRightSide {
-        width: 808px;
-        top: -593px;
-        left: 392px;
-    }
-    .skillsLeftSide {
-        left: 86px;
-        width: 303px;
-    }
-    .photographyImage {
-        left: 155px;
-    }
-    span.text1 {
-        left: 118px;
-    }
-    .designingImage {
-        left: 256px;
-    }
-    span.text2 {
-        left: 218px;
-    }
-    .programmingImage {
-        left: 348px;
-    }
-}
 @media all and (min-width: 375px) and (max-width: 414px){
     .toggle{
         display: block;
@@ -4312,9 +4207,19 @@ label {
         letter-spacing: 10px;
         font-family: 'Roboto', sans-serif;
         cursor: default;
-        /* animation-name: ph_top_to_bot; */
-        /* animation-duration: 8s; */
-        /* animation-delay: 1s; */
+        animation-name: ph_top_to_bot;
+        animation-duration: 8s;
+        animation-delay: 1s;
+
+    }
+    @keyframes ph_top_to_bot{
+        0%{
+            top: 0;
+        }
+        100%{
+            top: 1%;
+        }
+
     }
     .project1 {
         position: absolute;
@@ -4807,6 +4712,131 @@ label {
         cursor: pointer;
         width: 15px;
         height: 15px;
+    }
+
+
+}
+@media all and (min-width: 768px) and (max-width: 1280px){
+    .SectionOne{
+        width: 1280px;
+    }
+    .Sectiontwo{
+        width: 1280px;
+    }
+    .SectionThree{
+        width: 1280px;
+    }
+    .SectionFour{
+        width: 1280px;
+    }
+    .SectionFive{
+        width: 1280px;
+    }
+    .SectionSix{
+        width: 1280px;
+    }
+    .SectionSeven{
+        width: 1280px;
+        /*height: 489px;*/
+    }
+    .SectionEight{
+        width:1280px;
+        /*display: none;*/
+    }
+    .SectionNine{
+        width: 1280px;
+        /*display: none;*/
+    }
+    .SectionTen {
+        width: 1280px;
+        /*height: 492px;*/
+    }
+    .SectionEleven{
+        width: 1280px;
+    }
+    header {
+        width: 99%;
+        /*width: 1280px;*/
+        height: 70px;
+        box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+        background: white;
+        position: fixed;
+        display: flex;
+        z-index: 3;
+        transition: .5s;
+        box-sizing: border-box;
+    }
+    .open_image {
+        /* animation: increas 50s linear 20ms infinite; */
+        width: 1280px;
+    }
+    .rectangle2 {
+        position: relative;
+        background-color: #1A71A3;
+        height: 288px;
+        width: 1247px;
+    }
+    .Ed_Image{
+        width: 1280px;
+    }
+    .Int_Image {
+        animation: none;
+        width: 1280px;
+    }
+    .projectHeader {
+        left: 18%;
+    }
+    .project1 {
+        left: 6%;
+    }
+    .project2 {
+        left: 36%;
+    }
+    .project3 {
+        left: 66%;
+    }
+    .primaryText1 {
+        left: 33%;
+    }
+    .higherBox {
+        left: 546px;
+    }
+    .gdseBox {
+        right: 156px;
+    }
+    .Sec8next {
+        right: 10%;
+    }
+    .In_text {
+        left: 19%;
+    }
+    .SecContact {
+        width: 1134px;
+        position: absolute;
+    }
+    .skillsRightSide {
+        width: 808px;
+        top: -593px;
+        left: 392px;
+    }
+    .skillsLeftSide {
+        left: 86px;
+        width: 303px;
+    }
+    .photographyImage {
+        left: 155px;
+    }
+    span.text1 {
+        left: 118px;
+    }
+    .designingImage {
+        left: 256px;
+    }
+    span.text2 {
+        left: 218px;
+    }
+    .programmingImage {
+        left: 348px;
     }
 
 
